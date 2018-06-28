@@ -8,8 +8,14 @@ ouvrir godot engine et aller chercher avec Nouveau Projet le fichier .godot qui 
 Note:
 lorsque que l'on change un chiffre on remet les précédent à 0. Le premier chiffre correspond à un changement de moteur ou d'architecture, le second les mise a jour majeur, le troisième mineur&bug_fix, le quatrième le mise a joure mineur : suppréssion de contenu inutile, fonction temporaire ou préinstallée. un mini change log est demandé a chaque commit
 
+1.0.0.3
+-LTBS46 a enfin comprit comment Github marche
+
+1.0.0.2
+-et ainsi de suite
+
 1.0.0.1
--on continu les teste mais cette fois sur godot engine
+-LTBS46 continu les teste mais cette fois sur godot engine
 
 1.0.0.0
 -première mis a jour LTBS46 test
