@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/porte qui grince.wav-d5cf5b9ce9f1a7f86b9e3af3bb402db6.sample"
+
+[deps]
+
+source_file="res://son/bruitage/porte qui grince.wav"
+dest_files=[ "res://.import/porte qui grince.wav-d5cf5b9ce9f1a7f86b9e3af3bb402db6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

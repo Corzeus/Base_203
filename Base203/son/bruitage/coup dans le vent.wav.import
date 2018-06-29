@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/coup dans le vent.wav-ae37c2b8c02d9982f742eff83cfc5fa2.sample"
+
+[deps]
+
+source_file="res://son/bruitage/coup dans le vent.wav"
+dest_files=[ "res://.import/coup dans le vent.wav-ae37c2b8c02d9982f742eff83cfc5fa2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

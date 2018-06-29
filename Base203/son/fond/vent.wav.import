@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/vent.wav-133bf2acd4849d02575ca155b09208db.sample"
+
+[deps]
+
+source_file="res://son/fond/vent.wav"
+dest_files=[ "res://.import/vent.wav-133bf2acd4849d02575ca155b09208db.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
