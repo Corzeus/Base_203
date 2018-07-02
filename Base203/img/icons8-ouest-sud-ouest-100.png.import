@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/icons8-ouest-sud-ouest-100.png-b4cb961b763413ced1a05f46b9af3303.stex"
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://img/icons8-ouest-sud-ouest-100.png"
+dest_files=[ "res://.import/icons8-ouest-sud-ouest-100.png-b4cb961b763413ced1a05f46b9af3303.stex" ]
 
 [params]
 
