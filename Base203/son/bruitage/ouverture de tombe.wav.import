@@ -7,7 +7,10 @@ path="res://.import/ouverture de tombe.wav-a156ec168562d912d78556b0468399bf.samp
 [deps]
 
 source_file="res://son/bruitage/ouverture de tombe.wav"
+source_md5="6a15bcf23454ede5dad7ef28801581bc"
+
 dest_files=[ "res://.import/ouverture de tombe.wav-a156ec168562d912d78556b0468399bf.sample" ]
+dest_md5="79f8ebca1875dad73bb351cc70ea1013"
 
 [params]
 

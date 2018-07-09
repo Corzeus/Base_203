@@ -7,7 +7,10 @@ path="res://.import/porte qui grince (2).wav-ee0ea245a203845bc56682f45b41627e.sa
 [deps]
 
 source_file="res://son/bruitage/porte qui grince (2).wav"
+source_md5="10430577d4941271884020bab106069f"
+
 dest_files=[ "res://.import/porte qui grince (2).wav-ee0ea245a203845bc56682f45b41627e.sample" ]
+dest_md5="9a881be15d66b0f99a5ecff4eb32b7c1"
 
 [params]
 

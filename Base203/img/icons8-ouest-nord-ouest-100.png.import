@@ -7,7 +7,10 @@ path="res://.import/icons8-ouest-nord-ouest-100.png-37aa553af1eabe41a6eff28c24d2
 [deps]
 
 source_file="res://img/icons8-ouest-nord-ouest-100.png"
+source_md5="caa033b97eb540f6c9b98901cb94563e"
+
 dest_files=[ "res://.import/icons8-ouest-nord-ouest-100.png-37aa553af1eabe41a6eff28c24d2e577.stex" ]
+dest_md5="4300d267160101a478b54677349b6891"
 
 [params]
 

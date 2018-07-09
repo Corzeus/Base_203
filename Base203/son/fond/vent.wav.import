@@ -7,7 +7,10 @@ path="res://.import/vent.wav-133bf2acd4849d02575ca155b09208db.sample"
 [deps]
 
 source_file="res://son/fond/vent.wav"
+source_md5="3695c00cfe58a012fd237fbf0edf46e7"
+
 dest_files=[ "res://.import/vent.wav-133bf2acd4849d02575ca155b09208db.sample" ]
+dest_md5="221cd4c85820c02e3c3214f24af8b71e"
 
 [params]
 

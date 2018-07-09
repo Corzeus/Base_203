@@ -7,7 +7,10 @@ path="res://.import/coeur.wav-756db5ad8c3660df6c4bc6e10ca9353c.sample"
 [deps]
 
 source_file="res://son/bruitage/coeur.wav"
+source_md5="715949f092f5503a17e563e54c0d3eee"
+
 dest_files=[ "res://.import/coeur.wav-756db5ad8c3660df6c4bc6e10ca9353c.sample" ]
+dest_md5="07685e5d3d6b1218bd4fc8a153071c1d"
 
 [params]
 
