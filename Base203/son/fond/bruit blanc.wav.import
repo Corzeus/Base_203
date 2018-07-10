@@ -7,7 +7,10 @@ path="res://.import/bruit blanc.wav-8ac7467171c68957540ca34d8ec375da.sample"
 [deps]
 
 source_file="res://son/fond/bruit blanc.wav"
+source_md5="7968a1dc3ff3b13912db6d146a8d917c"
+
 dest_files=[ "res://.import/bruit blanc.wav-8ac7467171c68957540ca34d8ec375da.sample" ]
+dest_md5="2178b1a6301f7be1b3e78be94dbc38ff"
 
 [params]
 

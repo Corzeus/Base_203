@@ -7,7 +7,10 @@ path="res://.import/icons8-fusil-d'assaut-40.png-32258555f16e48057248d68973e7319
 [deps]
 
 source_file="res://img/icons8-fusil-d'assaut-40.png"
+source_md5="43d72de5da14e7e4450ba21f50cf82de"
+
 dest_files=[ "res://.import/icons8-fusil-d'assaut-40.png-32258555f16e48057248d68973e73193.stex" ]
+dest_md5="fd42558931ce99447a6e4b7deb72fbfa"
 
 [params]
 

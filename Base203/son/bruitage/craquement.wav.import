@@ -7,7 +7,10 @@ path="res://.import/craquement.wav-4f8e810e328389a5c45994ce5c59ba6c.sample"
 [deps]
 
 source_file="res://son/bruitage/craquement.wav"
+source_md5="d46c606789edab55b50ea3c5bccd48ce"
+
 dest_files=[ "res://.import/craquement.wav-4f8e810e328389a5c45994ce5c59ba6c.sample" ]
+dest_md5="458b6d5d0c4a551f3caacca71395d32e"
 
 [params]
 
