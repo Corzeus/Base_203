@@ -2,15 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Radio qui décone.wav-eae814cd0393d4ba9e2c9393f433549d.sample"
+path="res://.import/Radio qui décone.wav-51371f0b71c2a33efcb4fa21b56b1aaf.sample"
 
 [deps]
 
-source_file="res://son/fond/Radio qui décone.wav"
-source_md5="47764d3d54f29c9f678b7e6c8c7ea131"
-
-dest_files=[ "res://.import/Radio qui décone.wav-eae814cd0393d4ba9e2c9393f433549d.sample" ]
-dest_md5="7927732ecab82478f5f07358d54cf4d8"
+source_file="res://Resource/son/fond/Radio qui décone.wav"
+dest_files=[ "res://.import/Radio qui décone.wav-51371f0b71c2a33efcb4fa21b56b1aaf.sample" ]
 
 [params]
 

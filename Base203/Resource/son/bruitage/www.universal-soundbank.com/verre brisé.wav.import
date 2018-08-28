@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/verre brisé.wav-f0f19e29906bd0f57192b295a56d687c.sample"
+
+[deps]
+
+source_file="res://Resource/son/bruitage/www.universal-soundbank.com/verre brisé.wav"
+dest_files=[ "res://.import/verre brisé.wav-f0f19e29906bd0f57192b295a56d687c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

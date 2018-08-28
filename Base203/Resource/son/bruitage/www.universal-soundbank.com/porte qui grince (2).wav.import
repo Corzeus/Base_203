@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/porte qui grince (2).wav-80b154f0ea23ed8649c731b94bb01df0.sample"
+
+[deps]
+
+source_file="res://Resource/son/bruitage/www.universal-soundbank.com/porte qui grince (2).wav"
+dest_files=[ "res://.import/porte qui grince (2).wav-80b154f0ea23ed8649c731b94bb01df0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

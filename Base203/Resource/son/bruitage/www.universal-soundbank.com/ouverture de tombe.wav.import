@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ouverture de tombe.wav-203e6e5d5ad4a93911edc9c5b47d9cdb.sample"
+
+[deps]
+
+source_file="res://Resource/son/bruitage/www.universal-soundbank.com/ouverture de tombe.wav"
+dest_files=[ "res://.import/ouverture de tombe.wav-203e6e5d5ad4a93911edc9c5b47d9cdb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/coeur.wav-38c844e7ca40378a1119f80912297e04.sample"
+
+[deps]
+
+source_file="res://Resource/son/bruitage/www.universal-soundbank.com/coeur.wav"
+dest_files=[ "res://.import/coeur.wav-38c844e7ca40378a1119f80912297e04.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
