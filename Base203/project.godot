@@ -11,8 +11,13 @@ config_version=3
 [application]
 
 config/name="Hk 203"
-run/main_scene="res://Menu.tscn"
+run/main_scene="res://scene/Menu/MAIN.tscn"
 config/icon="res://Resource/img/Godot engine/icon.png"
+
+[display]
+
+window/size/resizable=false
+window/size/fullscreen=true
 
 [rendering]
 
