@@ -17,7 +17,6 @@ config/icon="res://Resource/img/Godot engine/icon.png"
 [display]
 
 window/size/resizable=false
-window/size/fullscreen=true
 
 [rendering]
 

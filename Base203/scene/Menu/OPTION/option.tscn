@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://scene/Menu/PLAYButton.gd" type="Script" id=1]
-[ext_resource path="res://scene/Menu/OPTIONButton.gd" type="Script" id=2]
-[ext_resource path="res://Resource/img/icones8.fr/icons8-xbox-a-100.png" type="Texture" id=3]
+[ext_resource path="res://scene/Menu/OPTION/MENUButton.gd" type="Script" id=1]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-xbox-a-100.png" type="Texture" id=2]
+
 
 [sub_resource type="VisualScriptFunction" id=1]
 
@@ -133,20 +133,46 @@ _sections_unfolded = [ "input_0" ]
 data = {
 "base_type": "Node2D",
 "functions": [ {
-"data_connections": [ 2, 0, 3, 0, 5, 0, 4, 0, 6, 0, 5, 0, 3, 0, 6, 0, 3, 1, 8, 0, 8, 0, 5, 1 ],
+"data_connections": [ 2, 0, 3, 0, 5, 0, 4, 0, 6, 0, 5, 0, 3, 0, 6, 0, 3, 1, 7, 0, 7, 0, 5, 1 ],
 "function_id": 0,
 "name": "_process",
-"nodes": [ 0, Vector2( 240, 0 ), SubResource( 1 ), 2, Vector2( -340, 100 ), SubResource( 2 ), 3, Vector2( -140, 100 ), SubResource( 3 ), 4, Vector2( 380, 0 ), SubResource( 4 ), 5, Vector2( 220, 100 ), SubResource( 5 ), 6, Vector2( 40, 100 ), SubResource( 6 ), 8, Vector2( 40, 180 ), SubResource( 7 ) ],
-"scroll": Vector2( -227.423, -18.924 ),
+"nodes": [ 0, Vector2( 0, 0 ), SubResource( 1 ), 2, Vector2( -580, 100 ), SubResource( 2 ), 3, Vector2( -380, 100 ), SubResource( 3 ), 4, Vector2( 140, 0 ), SubResource( 4 ), 5, Vector2( -20, 100 ), SubResource( 5 ), 6, Vector2( -200, 100 ), SubResource( 6 ), 7, Vector2( -200, 180 ), SubResource( 7 ) ],
+"scroll": Vector2( -214, -100 ),
 "sequence_connections": [ 0, 0, 4 ]
 } ],
 "signals": [  ],
 "variables": [  ]
 }
 
-[node name="BASE" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="." index="0"]
+[node name="GO_BACK" type="Button" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -25.5
+margin_right = 25.5
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "MENU"
+flat = false
+align = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Rect" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="1"]
 
 anchor_mode = 1
 rotating = false
@@ -171,97 +197,17 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
-[node name="PLAY" type="Button" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -22.0
-margin_top = -100.0
-margin_right = 21.0
-margin_bottom = -80.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "PLAY"
-flat = false
-align = 1
-script = ExtResource( 1 )
-_sections_unfolded = [ "Rect", "Theme" ]
-
-[node name="OPTION" type="Button" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -32.0
-margin_right = 32.0
-margin_bottom = 20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "OPTION"
-flat = false
-align = 1
-script = ExtResource( 2 )
-_sections_unfolded = [ "Rect" ]
-
-[node name="EXIT" type="Button" parent="." index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -19.5
-margin_top = 100.0
-margin_right = 19.5
-margin_bottom = 120.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "EXIT"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Node2D" type="Node2D" parent="." index="4"]
+[node name="Node2D" type="Node2D" parent="." index="2"]
 
 script = SubResource( 8 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="ACCEPTER" type="Label" parent="Node2D" index="0"]
+[node name="Label" type="Label" parent="Node2D" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 62.0
+margin_right = 40.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -273,17 +219,14 @@ text = "ACCEPTER"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="Sprite" type="Sprite" parent="Node2D/ACCEPTER" index="0"]
+[node name="Sprite" type="Sprite" parent="Node2D/Label" index="0"]
 
 position = Vector2( 74, 5 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 3 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
-[connection signal="pressed" from="PLAY" to="PLAY" method="_on_PLAY_pressed"]
-
-[connection signal="pressed" from="OPTION" to="OPTION" method="_on_OPTION_pressed"]
+[connection signal="pressed" from="GO_BACK" to="GO_BACK" method="_on_GO_BACK_pressed"]
 
 
