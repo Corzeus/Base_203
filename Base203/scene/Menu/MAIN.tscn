@@ -1,8 +1,148 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scene/Menu/PLAYButton.gd" type="Script" id=1]
 [ext_resource path="res://scene/Menu/OPTIONButton.gd" type="Script" id=2]
 [ext_resource path="res://Resource/img/icones8.fr/icons8-xbox-a-100.png" type="Texture" id=3]
+
+[sub_resource type="VisualScriptFunction" id=1]
+
+resource_name = "_process"
+_default_input_values = [  ]
+argument_count = 1
+argument_1/type = 3
+argument_1/name = "delta"
+sequenced/sequenced = true
+stack/size = 256
+stack/stackless = false
+rpc/mode = 0
+
+[sub_resource type="VisualScriptFunctionCall" id=2]
+
+_default_input_values = [  ]
+call_mode = 4
+base_type = "_OS"
+singleton = "OS"
+argument_cache = {
+"args": [ {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "screen",
+"type": 2,
+"usage": 7
+} ],
+"default_args": [  ],
+"flags": 9,
+"id": 0,
+"name": "",
+"return": {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "",
+"type": 5,
+"usage": 7
+}
+}
+function = "get_screen_size"
+use_default_args = 1
+validate = true
+rpc_call_mode = 0
+
+[sub_resource type="VisualScriptDeconstruct" id=3]
+
+_default_input_values = [ Vector2( 0, 0 ) ]
+type = 5
+elem_cache = [ "x", 3, "y", 3 ]
+
+[sub_resource type="VisualScriptPropertySet" id=4]
+
+_default_input_values = [ Vector2( 0, 0 ) ]
+set_mode = 0
+base_type = "Node2D"
+type_cache = {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "position",
+"type": 5,
+"usage": 519
+}
+property = "position"
+index = ""
+assign_op = 0
+
+[sub_resource type="VisualScriptConstructor" id=5]
+
+_default_input_values = [ null, null ]
+type = 5
+constructor = {
+"args": [ {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "x",
+"type": 3,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "y",
+"type": 3,
+"usage": 7
+} ],
+"default_args": [  ],
+"flags": 1,
+"id": 0,
+"name": "Vector2",
+"return": {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "",
+"type": 5,
+"usage": 7
+}
+}
+
+[sub_resource type="VisualScriptExpression" id=6]
+
+_default_input_values = [ 0.0 ]
+expression = "a/4"
+out_type = 3
+input_count = 1
+sequenced = false
+input_0/type = 3
+input_0/name = "a"
+_sections_unfolded = [ "input_0" ]
+
+[sub_resource type="VisualScriptExpression" id=7]
+
+_default_input_values = [ 0.0 ]
+expression = "(a/2)-20"
+out_type = 3
+input_count = 1
+sequenced = false
+input_0/type = 3
+input_0/name = "a"
+_sections_unfolded = [ "input_0" ]
+
+[sub_resource type="VisualScript" id=8]
+
+data = {
+"base_type": "Node2D",
+"functions": [ {
+"data_connections": [ 2, 0, 3, 0, 5, 0, 4, 0, 6, 0, 5, 0, 3, 0, 6, 0, 3, 1, 8, 0, 8, 0, 5, 1 ],
+"function_id": 0,
+"name": "_process",
+"nodes": [ 0, Vector2( 240, 0 ), SubResource( 1 ), 2, Vector2( -340, 100 ), SubResource( 2 ), 3, Vector2( -140, 100 ), SubResource( 3 ), 4, Vector2( 380, 0 ), SubResource( 4 ), 5, Vector2( 220, 100 ), SubResource( 5 ), 6, Vector2( 40, 100 ), SubResource( 6 ), 8, Vector2( 40, 180 ), SubResource( 7 ) ],
+"scroll": Vector2( -227.423, -18.924 ),
+"sequence_connections": [ 0, 0, 4 ]
+} ],
+"signals": [  ],
+"variables": [  ]
+}
 
 [node name="BASE" type="Node2D" index="0"]
 
@@ -110,16 +250,19 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="Label" type="Label" parent="." index="4"]
+[node name="Node2D" type="Node2D" parent="." index="4"]
+
+script = SubResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ACCEPTER" type="Label" parent="Node2D" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 137.0
-margin_top = 288.0
-margin_right = 199.0
-margin_bottom = 302.0
+margin_right = 62.0
+margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -132,7 +275,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="Sprite" type="Sprite" parent="Label" index="0"]
+[node name="Sprite" type="Sprite" parent="Node2D/ACCEPTER" index="0"]
 
 position = Vector2( 74, 5 )
 scale = Vector2( 0.2, 0.2 )

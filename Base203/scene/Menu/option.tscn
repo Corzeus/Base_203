@@ -1,6 +1,146 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scene/Menu/MENUButton.gd" type="Script" id=1]
+
+[sub_resource type="VisualScriptFunction" id=1]
+
+resource_name = "_process"
+_default_input_values = [  ]
+argument_count = 1
+argument_1/type = 3
+argument_1/name = "delta"
+sequenced/sequenced = true
+stack/size = 256
+stack/stackless = false
+rpc/mode = 0
+
+[sub_resource type="VisualScriptFunctionCall" id=2]
+
+_default_input_values = [  ]
+call_mode = 4
+base_type = "_OS"
+singleton = "OS"
+argument_cache = {
+"args": [ {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "screen",
+"type": 2,
+"usage": 7
+} ],
+"default_args": [  ],
+"flags": 9,
+"id": 0,
+"name": "",
+"return": {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "",
+"type": 5,
+"usage": 7
+}
+}
+function = "get_screen_size"
+use_default_args = 1
+validate = true
+rpc_call_mode = 0
+
+[sub_resource type="VisualScriptDeconstruct" id=3]
+
+_default_input_values = [ Vector2( 0, 0 ) ]
+type = 5
+elem_cache = [ "x", 3, "y", 3 ]
+
+[sub_resource type="VisualScriptPropertySet" id=4]
+
+_default_input_values = [ Vector2( 0, 0 ) ]
+set_mode = 0
+base_type = "Node2D"
+type_cache = {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "position",
+"type": 5,
+"usage": 519
+}
+property = "position"
+index = ""
+assign_op = 0
+
+[sub_resource type="VisualScriptConstructor" id=5]
+
+_default_input_values = [ null, null ]
+type = 5
+constructor = {
+"args": [ {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "x",
+"type": 3,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "y",
+"type": 3,
+"usage": 7
+} ],
+"default_args": [  ],
+"flags": 1,
+"id": 0,
+"name": "Vector2",
+"return": {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "",
+"type": 5,
+"usage": 7
+}
+}
+
+[sub_resource type="VisualScriptExpression" id=6]
+
+_default_input_values = [ 0.0 ]
+expression = "a/4"
+out_type = 3
+input_count = 1
+sequenced = false
+input_0/type = 3
+input_0/name = "a"
+_sections_unfolded = [ "input_0" ]
+
+[sub_resource type="VisualScriptExpression" id=7]
+
+_default_input_values = [ 0.0 ]
+expression = "(a/2)-20"
+out_type = 3
+input_count = 1
+sequenced = false
+input_0/type = 3
+input_0/name = "a"
+_sections_unfolded = [ "input_0" ]
+
+[sub_resource type="VisualScript" id=8]
+
+data = {
+"base_type": "Node2D",
+"functions": [ {
+"data_connections": [ 2, 0, 3, 0, 5, 0, 4, 0, 6, 0, 5, 0, 3, 0, 6, 0, 3, 1, 7, 0, 7, 0, 5, 1 ],
+"function_id": 0,
+"name": "_process",
+"nodes": [ 0, Vector2( 0, 0 ), SubResource( 1 ), 2, Vector2( -580, 100 ), SubResource( 2 ), 3, Vector2( -380, 100 ), SubResource( 3 ), 4, Vector2( 140, 0 ), SubResource( 4 ), 5, Vector2( -20, 100 ), SubResource( 5 ), 6, Vector2( -200, 100 ), SubResource( 6 ), 7, Vector2( -200, 180 ), SubResource( 7 ) ],
+"scroll": Vector2( -214, -100 ),
+"sequence_connections": [ 0, 0, 4 ]
+} ],
+"signals": [  ],
+"variables": [  ]
+}
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -34,7 +174,7 @@ _sections_unfolded = [ "Anchor", "Rect" ]
 
 anchor_mode = 1
 rotating = false
-current = false
+current = true
 zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000
@@ -54,6 +194,30 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+
+[node name="Node2D" type="Node2D" parent="." index="2"]
+
+script = SubResource( 8 )
+
+[node name="Label" type="Label" parent="Node2D" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Node2D/Label" index="0"]
 
 [connection signal="pressed" from="GO_BACK" to="GO_BACK" method="_on_GO_BACK_pressed"]
 
