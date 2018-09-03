@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scene/game/MAIN/SAVE_CALL.gd" type="Script" id=1]
+[ext_resource path="res://scene/game/peons/Cheif.tscn" type="PackedScene" id=2]
+
+[node name="BASE" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="MAP" type="Sprite" parent="." index="0"]
+
+[node name="HUB" type="Area2D" parent="MAP" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Audio Bus", "Collision", "Pickable" ]
+
+[node name="POINT_1" type="Node2D" parent="MAP/HUB" index="0"]
+
+[node name="POINT_2" type="Node2D" parent="MAP/HUB" index="1"]
+
+[node name="POINT_3" type="Node2D" parent="MAP/HUB" index="2"]
+
+[node name="LAB" type="Area2D" parent="MAP" index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="POINT_1" type="Node2D" parent="MAP/LAB" index="0"]
+
+[node name="POINT_2" type="Node2D" parent="MAP/LAB" index="1"]
+
+[node name="POINT_3" type="Node2D" parent="MAP/LAB" index="2"]
+
+[node name="Chief" parent="." index="1" groups=[
+"Persist",
+] instance=ExtResource( 2 )]
+
+

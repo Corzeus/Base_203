@@ -146,7 +146,7 @@ data = {
 "variables": [  ]
 }
 
-[node name="BASE" type="Node2D" index="0"]
+[node name="BASE" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
 
@@ -266,6 +266,7 @@ _sections_unfolded = [ "Focus", "Rect" ]
 
 [node name="Node2D" type="Node2D" parent="." index="4"]
 
+position = Vector2( 200, 200 )
 script = SubResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
