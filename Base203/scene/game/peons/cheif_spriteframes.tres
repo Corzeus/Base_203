@@ -1,0 +1,28 @@
+[gd_resource type="SpriteFrames" load_steps=17 format=2]
+
+[ext_resource path="res://Resource/img/icones8.fr/icons8-est-100.png" type="Texture" id=1]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-est-sud-est-100.png" type="Texture" id=2]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-south-east-100.png" type="Texture" id=3]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-sud-sud-est-100.png" type="Texture" id=4]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-sud-100.png" type="Texture" id=5]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-sud-sud-ouest-100 (1).png" type="Texture" id=6]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-sud-ouest-100.png" type="Texture" id=7]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-ouest-sud-ouest-100.png" type="Texture" id=8]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-ouest-100.png" type="Texture" id=9]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-ouest-nord-ouest-100.png" type="Texture" id=10]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-north-west-100.png" type="Texture" id=11]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-nord-nord-ouest-100.png" type="Texture" id=12]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-nord-100.png" type="Texture" id=13]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-nord-nord-est-100.png" type="Texture" id=14]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-north-east-100.png" type="Texture" id=15]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-est-nord-est-100.png" type="Texture" id=16]
+
+[resource]
+
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+

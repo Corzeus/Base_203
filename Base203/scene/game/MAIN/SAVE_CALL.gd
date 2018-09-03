@@ -3,7 +3,7 @@ extends Node2D
 var save_path = "res://save/savegame.save"
 
 func _ready():
-	pass
+	load_game()
 
 func _process(delta):
 	if Input.is_action_pressed("SAVE"):
