@@ -1,8 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scene/Menu/OPTION/option.gd" type="Script" id=1]
 [ext_resource path="res://scene/Menu/OPTION/MENUButton.gd" type="Script" id=2]
 [ext_resource path="res://Resource/img/icones8.fr/icons8-xbox-a-100.png" type="Texture" id=3]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-great-britain-48.png" type="Texture" id=4]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-spain-flag-48.png" type="Texture" id=5]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-france-48.png" type="Texture" id=6]
 
 [sub_resource type="VisualScriptFunction" id=1]
 
@@ -16,13 +19,13 @@ stack/size = 256
 stack/stackless = false
 rpc/mode = 0
 
-[sub_resource type="VisualScriptDeconstruct" id=3]
+[sub_resource type="VisualScriptDeconstruct" id=2]
 
 _default_input_values = [ Vector2( 0, 0 ) ]
 type = 5
 elem_cache = [ "x", 3, "y", 3 ]
 
-[sub_resource type="VisualScriptPropertySet" id=4]
+[sub_resource type="VisualScriptPropertySet" id=3]
 
 _default_input_values = [ Vector2( 0, 0 ) ]
 set_mode = 0
@@ -39,7 +42,7 @@ property = "position"
 index = ""
 assign_op = 0
 
-[sub_resource type="VisualScriptConstructor" id=5]
+[sub_resource type="VisualScriptConstructor" id=4]
 
 _default_input_values = [ null, null ]
 type = 5
@@ -73,7 +76,7 @@ constructor = {
 }
 }
 
-[sub_resource type="VisualScriptExpression" id=6]
+[sub_resource type="VisualScriptExpression" id=5]
 
 _default_input_values = [ 0.0 ]
 expression = "a/4"
@@ -84,7 +87,7 @@ input_0/type = 3
 input_0/name = "a"
 _sections_unfolded = [ "input_0" ]
 
-[sub_resource type="VisualScriptExpression" id=7]
+[sub_resource type="VisualScriptExpression" id=6]
 
 _default_input_values = [ 0.0 ]
 expression = "(a/2)-20"
@@ -95,7 +98,7 @@ input_0/type = 3
 input_0/name = "a"
 _sections_unfolded = [ "input_0" ]
 
-[sub_resource type="VisualScriptFunctionCall" id=9]
+[sub_resource type="VisualScriptFunctionCall" id=7]
 
 _default_input_values = [  ]
 call_mode = 4
@@ -120,13 +123,13 @@ function = "get_window_safe_area"
 validate = true
 rpc_call_mode = 0
 
-[sub_resource type="VisualScriptDeconstruct" id=10]
+[sub_resource type="VisualScriptDeconstruct" id=8]
 
 _default_input_values = [ Rect2( 0, 0, 0, 0 ) ]
 type = 6
 elem_cache = [ "position", 5, "size", 5, "end", 5 ]
 
-[sub_resource type="VisualScript" id=8]
+[sub_resource type="VisualScript" id=9]
 
 data = {
 "base_type": "Node2D",
@@ -134,7 +137,7 @@ data = {
 "data_connections": [ 10, 1, 3, 0, 5, 0, 4, 0, 6, 0, 5, 0, 3, 0, 6, 0, 3, 1, 7, 0, 9, 0, 10, 0, 7, 0, 5, 1 ],
 "function_id": 0,
 "name": "_process",
-"nodes": [ 0, Vector2( 0, 0 ), SubResource( 1 ), 3, Vector2( -380, 100 ), SubResource( 3 ), 4, Vector2( 140, 0 ), SubResource( 4 ), 5, Vector2( -20, 100 ), SubResource( 5 ), 6, Vector2( -200, 100 ), SubResource( 6 ), 7, Vector2( -200, 180 ), SubResource( 7 ), 9, Vector2( -860, 100 ), SubResource( 9 ), 10, Vector2( -600, 100 ), SubResource( 10 ) ],
+"nodes": [ 0, Vector2( 0, 0 ), SubResource( 1 ), 3, Vector2( -380, 100 ), SubResource( 2 ), 4, Vector2( 140, 0 ), SubResource( 3 ), 5, Vector2( -20, 100 ), SubResource( 4 ), 6, Vector2( -200, 100 ), SubResource( 5 ), 7, Vector2( -200, 180 ), SubResource( 6 ), 9, Vector2( -860, 100 ), SubResource( 7 ), 10, Vector2( -600, 100 ), SubResource( 8 ) ],
 "scroll": Vector2( -824.592, -100 ),
 "sequence_connections": [ 0, 0, 4 ]
 } ],
@@ -166,7 +169,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "MENU"
+text = "KEY1"
 flat = false
 align = 1
 script = ExtResource( 2 )
@@ -199,7 +202,7 @@ editor_draw_drag_margin = false
 
 [node name="Node2D" type="Node2D" parent="." index="2"]
 
-script = SubResource( 8 )
+script = SubResource( 9 )
 
 [node name="Label" type="Label" parent="Node2D" index="0"]
 
@@ -247,7 +250,116 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "FULL_SCREEN"
+text = "KEY2"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="To_EN" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -23.0
+margin_top = -57.0
+margin_right = 37.0
+margin_bottom = -3.0
+rect_scale = Vector2( 0.68, 0.68 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 4 )
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="To_ES" type="Button" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 58.0
+margin_top = -57.0
+margin_right = 118.0
+margin_bottom = -3.0
+rect_scale = Vector2( 0.68, 0.68 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 5 )
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="To_FR" type="Button" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 17.0
+margin_top = -57.0
+margin_right = 77.0
+margin_bottom = -3.0
+rect_scale = Vector2( 0.68, 0.68 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 6 )
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="LANGUE" type="Button" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -100.0
+margin_top = -57.0
+margin_right = -23.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 77, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "KEY3"
 flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
@@ -255,5 +367,11 @@ _sections_unfolded = [ "Rect" ]
 [connection signal="pressed" from="GO_BACK" to="GO_BACK" method="_on_GO_BACK_pressed"]
 
 [connection signal="pressed" from="FULL_SCREEN" to="." method="_on_FULL_SCREEN_pressed"]
+
+[connection signal="pressed" from="To_EN" to="." method="_on_To_EN_pressed"]
+
+[connection signal="pressed" from="To_ES" to="." method="_on_To_ES_pressed"]
+
+[connection signal="pressed" from="To_FR" to="." method="_on_To_FR_pressed"]
 
 

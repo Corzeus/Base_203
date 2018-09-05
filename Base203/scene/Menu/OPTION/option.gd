@@ -11,3 +11,12 @@ func _on_FULL_SCREEN_pressed():
 		OS.set_window_fullscreen(false)
 	else:
 		OS.set_window_fullscreen(true)
+
+func _on_To_EN_pressed():
+	TranslationServer.set_locale("en")
+
+func _on_To_ES_pressed():
+	TranslationServer.set_locale("es")
+
+func _on_To_FR_pressed():
+	TranslationServer.set_locale("fr")

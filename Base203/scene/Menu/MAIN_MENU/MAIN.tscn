@@ -150,7 +150,7 @@ data = {
 "variables": [  ]
 }
 
-[node name="BASE" type="Node2D" index="0"]
+[node name="BASE" type="Node2D"]
 
 _sections_unfolded = [ "Transform", "Z Index" ]
 

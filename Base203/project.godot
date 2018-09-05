@@ -29,7 +29,8 @@ SAVE=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
 
 [locale]
 
-locale_filter=[ 0, [  ] ]
+locale_filter=[ 1, [ "en", "es", "fr" ] ]
+translations=PoolStringArray( "res://Resource/array/Translate.en.translation", "res://Resource/array/Translate.es.translation", "res://Resource/array/Translate.fr.translation" )
 
 [logging]
 
