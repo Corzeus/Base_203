@@ -8,9 +8,9 @@
 
 config_version=3
 
-[My param]
+[Config]
 
-"My Param"=0
+input/Controler_Mode=false
 
 [application]
 
@@ -21,6 +21,11 @@ config/icon="res://Resource/img/Godot engine/icon.png"
 [display]
 
 window/size/resizable=false
+
+[gui]
+
+theme/custom="res://Resource/SPE/MAIN_Dfont.tres"
+theme/custom_font="res://Resource/SPE/MAIN_theme.tres"
 
 [input]
 
