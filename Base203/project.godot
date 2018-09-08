@@ -11,6 +11,7 @@ config_version=3
 [Config]
 
 input/Controler_Mode=false
+input/OK=false
 
 [application]
 

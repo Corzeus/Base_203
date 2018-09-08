@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scene/Menu/MAIN_MENU/NEWGAMEButton.gd" type="Script" id=1]
 [ext_resource path="res://scene/Menu/MAIN_MENU/OPTIONButton.gd" type="Script" id=2]
@@ -8,12 +8,20 @@
 
 [sub_resource type="GDScript" id=1]
 
+script/source = "extends Node2D
+
+func _ready():
+	if not ProjectSettings.get_setting(\"Config/input/OK\"):
+		get_tree().change_scene(\"res://scene/Menu/OPTION/option.tscn\")"
+
+[sub_resource type="GDScript" id=2]
+
 script/source = "extends Button
 
 func _on_EXIT_pressed():
 	OS.kill(OS.get_process_id())"
 
-[sub_resource type="VisualScriptFunction" id=2]
+[sub_resource type="VisualScriptFunction" id=3]
 
 _default_input_values = [  ]
 argument_count = 1
@@ -24,7 +32,7 @@ stack/size = 256
 stack/stackless = false
 rpc/mode = 0
 
-[sub_resource type="VisualScriptFunctionCall" id=3]
+[sub_resource type="VisualScriptFunctionCall" id=4]
 
 _default_input_values = [  ]
 call_mode = 4
@@ -49,13 +57,13 @@ function = "get_window_safe_area"
 validate = true
 rpc_call_mode = 0
 
-[sub_resource type="VisualScriptDeconstruct" id=4]
+[sub_resource type="VisualScriptDeconstruct" id=5]
 
 _default_input_values = [ Rect2( 0, 0, 0, 0 ) ]
 type = 5
 elem_cache = [ "x", 3, "y", 3 ]
 
-[sub_resource type="VisualScriptPropertySet" id=5]
+[sub_resource type="VisualScriptPropertySet" id=6]
 
 _default_input_values = [ false ]
 set_mode = 0
@@ -72,7 +80,7 @@ property = "position"
 index = ""
 assign_op = 0
 
-[sub_resource type="VisualScriptConstructor" id=6]
+[sub_resource type="VisualScriptConstructor" id=7]
 
 _default_input_values = [ null, null ]
 type = 5
@@ -106,7 +114,7 @@ constructor = {
 }
 }
 
-[sub_resource type="VisualScriptExpression" id=7]
+[sub_resource type="VisualScriptExpression" id=8]
 
 _default_input_values = [ 0.0 ]
 expression = "a/4"
@@ -117,7 +125,7 @@ input_0/type = 3
 input_0/name = "a"
 _sections_unfolded = [ "input_0" ]
 
-[sub_resource type="VisualScriptExpression" id=8]
+[sub_resource type="VisualScriptExpression" id=9]
 
 _default_input_values = [ 0.0 ]
 expression = "(a/2)-20"
@@ -128,13 +136,13 @@ input_0/type = 3
 input_0/name = "a"
 _sections_unfolded = [ "input_0" ]
 
-[sub_resource type="VisualScriptDeconstruct" id=9]
+[sub_resource type="VisualScriptDeconstruct" id=10]
 
 _default_input_values = [ Rect2( 0, 0, 0, 0 ) ]
 type = 6
 elem_cache = [ "position", 5, "size", 5, "end", 5 ]
 
-[sub_resource type="VisualScriptPropertySet" id=10]
+[sub_resource type="VisualScriptPropertySet" id=11]
 
 _default_input_values = [ false ]
 set_mode = 0
@@ -150,7 +158,7 @@ type_cache = {
 property = "visible"
 assign_op = 0
 
-[sub_resource type="VisualScriptFunctionCall" id=11]
+[sub_resource type="VisualScriptFunctionCall" id=12]
 
 _default_input_values = [ 0 ]
 call_mode = 4
@@ -182,13 +190,13 @@ function = "get_setting"
 validate = true
 rpc_call_mode = 0
 
-[sub_resource type="VisualScriptConstant" id=12]
+[sub_resource type="VisualScriptConstant" id=13]
 
 _default_input_values = [  ]
 type = 4
 value = "Config/input/Controler_Mode"
 
-[sub_resource type="VisualScript" id=13]
+[sub_resource type="VisualScript" id=14]
 
 data = {
 "base_type": "Node2D",
@@ -196,7 +204,7 @@ data = {
 "data_connections": [ 10, 1, 3, 0, 5, 0, 4, 0, 6, 0, 5, 0, 3, 0, 6, 0, 3, 1, 8, 0, 2, 0, 10, 0, 14, 0, 12, 0, 15, 0, 14, 0, 8, 0, 5, 1 ],
 "function_id": 0,
 "name": "_process",
-"nodes": [ 0, Vector2( 240, 0 ), SubResource( 2 ), 2, Vector2( -620, 100 ), SubResource( 3 ), 3, Vector2( -140, 100 ), SubResource( 4 ), 4, Vector2( 380, 0 ), SubResource( 5 ), 5, Vector2( 220, 100 ), SubResource( 6 ), 6, Vector2( 40, 100 ), SubResource( 7 ), 8, Vector2( 40, 180 ), SubResource( 8 ), 10, Vector2( -360, 100 ), SubResource( 9 ), 12, Vector2( 520, 0 ), SubResource( 10 ), 14, Vector2( 400, 100 ), SubResource( 11 ), 15, Vector2( 220, 220 ), SubResource( 12 ) ],
+"nodes": [ 0, Vector2( 240, 0 ), SubResource( 3 ), 2, Vector2( -620, 100 ), SubResource( 4 ), 3, Vector2( -140, 100 ), SubResource( 5 ), 4, Vector2( 380, 0 ), SubResource( 6 ), 5, Vector2( 220, 100 ), SubResource( 7 ), 6, Vector2( 40, 100 ), SubResource( 8 ), 8, Vector2( 40, 180 ), SubResource( 9 ), 10, Vector2( -360, 100 ), SubResource( 10 ), 12, Vector2( 520, 0 ), SubResource( 11 ), 14, Vector2( 400, 100 ), SubResource( 12 ), 15, Vector2( 220, 220 ), SubResource( 13 ) ],
 "scroll": Vector2( 102.512, 44 ),
 "sequence_connections": [ 0, 0, 4, 4, 0, 12 ]
 } ],
@@ -206,6 +214,7 @@ data = {
 
 [node name="BASE" type="Node2D"]
 
+script = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
@@ -322,13 +331,13 @@ group = null
 text = "EXIT"
 flat = false
 align = 1
-script = SubResource( 1 )
+script = SubResource( 2 )
 _sections_unfolded = [ "Focus", "Rect" ]
 
 [node name="Node2D" type="Node2D" parent="." index="4"]
 
 position = Vector2( 200, 200 )
-script = SubResource( 13 )
+script = SubResource( 14 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="ACCEPTER" type="Label" parent="Node2D" index="0"]

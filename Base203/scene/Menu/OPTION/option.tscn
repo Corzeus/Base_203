@@ -182,7 +182,7 @@ _default_input_values = [  ]
 type = 4
 value = "Config/input/Controler_Mode"
 
-[sub_resource type="VisualScript" id=13]
+[sub_resource type="VisualScript" id=12]
 
 data = {
 "base_type": "Node2D",
@@ -202,7 +202,9 @@ data = {
 
 script = ExtResource( 1 )
 
-[node name="GO_BACK" type="Button" parent="." index="0"]
+[node name="GO_BACK" type="Button" parent="." index="0" groups=[
+"L1",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -230,7 +232,9 @@ align = 1
 script = ExtResource( 2 )
 _sections_unfolded = [ "Anchor", "Focus", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="Camera2D" type="Camera2D" parent="." index="1"]
+[node name="Camera2D" type="Camera2D" parent="." index="1" groups=[
+"L1",
+]]
 
 anchor_mode = 1
 rotating = false
@@ -255,9 +259,11 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
-[node name="Node2D" type="Node2D" parent="." index="2"]
+[node name="Node2D" type="Node2D" parent="." index="2" groups=[
+"L1",
+]]
 
-script = SubResource( 13 )
+script = SubResource( 12 )
 
 [node name="Label" type="Label" parent="Node2D" index="0"]
 
@@ -287,6 +293,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="FULL_SCREEN" type="Button" parent="." index="3" groups=[
 "Auto_focus",
+"L1",
 ]]
 
 anchor_left = 0.0
@@ -316,7 +323,9 @@ flat = false
 align = 1
 _sections_unfolded = [ "Focus", "Mouse", "Rect" ]
 
-[node name="To_EN" type="Button" parent="." index="4"]
+[node name="To_EN" type="Button" parent="." index="4" groups=[
+"L1",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -345,7 +354,9 @@ flat = false
 align = 1
 _sections_unfolded = [ "Focus", "Pause", "Rect" ]
 
-[node name="To_FR" type="Button" parent="." index="5"]
+[node name="To_FR" type="Button" parent="." index="5" groups=[
+"L1",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -377,18 +388,21 @@ _sections_unfolded = [ "Focus", "Rect" ]
 
 [node name="KEYBOARD_MODE" type="Node2D" parent="." index="6" groups=[
 "KEYBOARD",
+"L1",
 ]]
 
-position = Vector2( -200, -100 )
+position = Vector2( -200, -80 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="UP" type="Button" parent="KEYBOARD_MODE" index="0"]
+[node name="UP" type="Button" parent="KEYBOARD_MODE" index="0" groups=[
+"KEYBOARD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 12.0
+margin_right = 100.0
 margin_bottom = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -403,15 +417,18 @@ shortcut = null
 group = null
 flat = false
 align = 1
+_sections_unfolded = [ "Rect" ]
 
-[node name="DOWN" type="Button" parent="KEYBOARD_MODE" index="1"]
+[node name="DOWN" type="Button" parent="KEYBOARD_MODE" index="1" groups=[
+"KEYBOARD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 20.0
-margin_right = 12.0
+margin_right = 100.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -428,14 +445,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="LEFT" type="Button" parent="KEYBOARD_MODE" index="2"]
+[node name="LEFT" type="Button" parent="KEYBOARD_MODE" index="2" groups=[
+"KEYBOARD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 40.0
-margin_right = 12.0
+margin_right = 100.0
 margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -452,14 +471,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="RIGHT" type="Button" parent="KEYBOARD_MODE" index="3"]
+[node name="RIGHT" type="Button" parent="KEYBOARD_MODE" index="3" groups=[
+"KEYBOARD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 60.0
-margin_right = 12.0
+margin_right = 100.0
 margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -476,14 +497,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="ESCAPE" type="Button" parent="KEYBOARD_MODE" index="4"]
+[node name="PAUSE" type="Button" parent="KEYBOARD_MODE" index="4" groups=[
+"KEYBOARD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 80.0
-margin_right = 12.0
+margin_right = 100.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -502,18 +525,22 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="GAMEPAD_MODE" type="Node2D" parent="." index="7" groups=[
 "GAMEPAD",
+"L1",
 ]]
 
-position = Vector2( 100, -100 )
+visible = false
+position = Vector2( 100, -80 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ACCEPT" type="Button" parent="GAMEPAD_MODE" index="0"]
+[node name="ACCEPT" type="Button" parent="GAMEPAD_MODE" index="0" groups=[
+"GAMEPAD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 12.0
+margin_right = 100.0
 margin_bottom = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -530,14 +557,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="DOWN2" type="Button" parent="GAMEPAD_MODE" index="1"]
+[node name="SUB_SELECT" type="Button" parent="GAMEPAD_MODE" index="1" groups=[
+"GAMEPAD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 20.0
-margin_right = 12.0
+margin_right = 100.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -554,14 +583,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="LEFT2" type="Button" parent="GAMEPAD_MODE" index="2"]
+[node name="LEFT2" type="Button" parent="GAMEPAD_MODE" index="2" groups=[
+"GAMEPAD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 40.0
-margin_right = 12.0
+margin_right = 100.0
 margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -578,14 +609,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="RIGHT2" type="Button" parent="GAMEPAD_MODE" index="3"]
+[node name="RIGHT2" type="Button" parent="GAMEPAD_MODE" index="3" groups=[
+"GAMEPAD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 60.0
-margin_right = 12.0
+margin_right = 100.0
 margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -602,15 +635,17 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="PAUSE" type="Button" parent="GAMEPAD_MODE" index="4"]
+[node name="PAUSE" type="Button" parent="GAMEPAD_MODE" index="4" groups=[
+"GAMEPAD",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 60.0
-margin_right = 12.0
-margin_bottom = 80.0
+margin_top = 80.0
+margin_right = 100.0
+margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -633,5 +668,17 @@ _sections_unfolded = [ "Rect" ]
 [connection signal="pressed" from="To_EN" to="." method="_on_To_EN_pressed"]
 
 [connection signal="pressed" from="To_FR" to="." method="_on_To_FR_pressed"]
+
+[connection signal="pressed" from="KEYBOARD_MODE/UP" to="." method="_on_UP_pressed"]
+
+[connection signal="pressed" from="KEYBOARD_MODE/DOWN" to="." method="_on_DOWN_pressed"]
+
+[connection signal="pressed" from="KEYBOARD_MODE/LEFT" to="." method="_on_LEFT_pressed"]
+
+[connection signal="pressed" from="KEYBOARD_MODE/RIGHT" to="." method="_on_RIGHT_pressed"]
+
+[connection signal="pressed" from="KEYBOARD_MODE/PAUSE" to="." method="_on_PAUSE_pressed"]
+
+[connection signal="pressed" from="GAMEPAD_MODE/ACCEPT" to="." method="_on_ACCEPT_pressed"]
 
 
