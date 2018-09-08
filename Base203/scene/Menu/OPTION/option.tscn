@@ -292,8 +292,8 @@ texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="FULL_SCREEN" type="Button" parent="." index="3" groups=[
-"Auto_focus",
 "L1",
+"Auto_focus",
 ]]
 
 anchor_left = 0.0
@@ -583,7 +583,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="LEFT2" type="Button" parent="GAMEPAD_MODE" index="2" groups=[
+[node name="INVENTORY" type="Button" parent="GAMEPAD_MODE" index="2" groups=[
 "GAMEPAD",
 ]]
 
@@ -609,7 +609,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="RIGHT2" type="Button" parent="GAMEPAD_MODE" index="3" groups=[
+[node name="BACK" type="Button" parent="GAMEPAD_MODE" index="3" groups=[
 "GAMEPAD",
 ]]
 
@@ -635,7 +635,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="PAUSE" type="Button" parent="GAMEPAD_MODE" index="4" groups=[
+[node name="PAUSEPAD" type="Button" parent="GAMEPAD_MODE" index="4" groups=[
 "GAMEPAD",
 ]]
 
@@ -680,5 +680,13 @@ _sections_unfolded = [ "Rect" ]
 [connection signal="pressed" from="KEYBOARD_MODE/PAUSE" to="." method="_on_PAUSE_pressed"]
 
 [connection signal="pressed" from="GAMEPAD_MODE/ACCEPT" to="." method="_on_ACCEPT_pressed"]
+
+[connection signal="pressed" from="GAMEPAD_MODE/SUB_SELECT" to="." method="_on_SUB_SELECT_pressed"]
+
+[connection signal="pressed" from="GAMEPAD_MODE/INVENTORY" to="." method="_on_INVENTORY_pressed"]
+
+[connection signal="pressed" from="GAMEPAD_MODE/BACK" to="." method="_on_BACK_pressed"]
+
+[connection signal="pressed" from="GAMEPAD_MODE/PAUSEPAD" to="." method="_on_PAUSEPAD_pressed"]
 
 

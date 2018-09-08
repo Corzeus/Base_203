@@ -212,7 +212,7 @@ data = {
 "variables": [  ]
 }
 
-[node name="BASE" type="Node2D"]
+[node name="BASE" type="Node2D" index="0"]
 
 script = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
