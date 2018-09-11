@@ -1,5 +1,0 @@
-OpenGL ES 3.0 Renderer: Intel(R) HD Graphics 4000
-**ERROR**: Error loading custom font 'res://Resource/SPE/MAIN_theme.tres'
-   At: scene/register_scene_types.cpp:617:register_scene_types() - Error loading custom font 'res://Resource/SPE/MAIN_theme.tres'
-**ERROR**: Error loading custom theme 'res://Resource/SPE/MAIN_Dfont.tres'
-   At: scene/register_scene_types.cpp:632:register_scene_types() - Error loading custom theme 'res://Resource/SPE/MAIN_Dfont.tres'

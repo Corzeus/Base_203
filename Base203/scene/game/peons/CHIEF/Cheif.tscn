@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scene/game/peons/CHIEF.gd" type="Script" id=1]
-[ext_resource path="res://scene/game/peons/cheif_spriteframes.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://scene/game/peons/CHIEF/CHIEF.gd" type="Script" id=1]
+[ext_resource path="res://scene/game/peons/CHIEF/cheif_spriteframes.tres" type="SpriteFrames" id=2]
 
-[node name="Cheif" type="Node2D" index="0"]
+[node name="Cheif" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
@@ -29,5 +29,11 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Pickable" ]
 
 build_mode = 0
 polygon = PoolVector2Array( 0, 0 )
+
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_Area2D_mouse_exited"]
 
 

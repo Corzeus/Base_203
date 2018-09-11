@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scene/game/MAIN/SAVE_CALL.gd" type="Script" id=1]
-[ext_resource path="res://scene/game/peons/Cheif.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/game/peons/CHIEF/Cheif.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/game/MAIN/Camera2D.gd" type="Script" id=3]
 
-[node name="BASE" type="Node2D"]
+[node name="BASE" type="Node2D" index="0" groups=[
+"BASE",
+]]
 
 script = ExtResource( 1 )
 
@@ -22,11 +25,44 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Pickable" ]
 
 [node name="POINT_1" type="Node2D" parent="MAP/HUB" index="0"]
 
+[node name="Chief" parent="MAP/HUB/POINT_1" index="0" groups=[
+"Persist",
+] instance=ExtResource( 2 )]
+
 [node name="POINT_2" type="Node2D" parent="MAP/HUB" index="1"]
 
 [node name="POINT_3" type="Node2D" parent="MAP/HUB" index="2"]
 
-[node name="LAB" type="Area2D" parent="MAP" index="1"]
+[node name="HUB_POLY" type="CollisionPolygon2D" parent="MAP/HUB" index="3"]
+
+build_mode = 0
+polygon = PoolVector2Array( 50, 100, 100, 50, 100, -50, 50, -100, -50, -100, -100, -50, -100, 50, -50, 100 )
+
+[node name="STOCK" type="Area2D" parent="MAP" index="1"]
+
+position = Vector2( -250, -250 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="POINT_1" type="Node2D" parent="MAP/STOCK" index="0"]
+
+[node name="POINT_2" type="Node2D" parent="MAP/STOCK" index="1"]
+
+[node name="POINT_3" type="Node2D" parent="MAP/STOCK" index="2"]
+
+[node name="STOCK_POLY" type="CollisionPolygon2D" parent="MAP/STOCK" index="3"]
+
+build_mode = 0
+polygon = PoolVector2Array( 200, 150, 150, 200, -50, 0, -550, 0, -550, -500, 0, -500, 0, -50 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="EXTERIEUR" type="Area2D" parent="MAP" index="2"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -36,14 +72,107 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="POINT_1" type="Node2D" parent="MAP/LAB" index="0"]
+[node name="EXTER_POLY" type="CollisionPolygon2D" parent="MAP/EXTERIEUR" index="0"]
 
-[node name="POINT_2" type="Node2D" parent="MAP/LAB" index="1"]
+build_mode = 0
+polygon = PoolVector2Array( -250, -750, -250, -300, -50, -100, 50, -100, 250, -300, 250, -375, 300, -425, 375, -425, 425, -375, 425, -300, 375, -250, 300, -250, 100, -50, 100, 50, 300, 250, 350, 200, 500, 200 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="POINT_3" type="Node2D" parent="MAP/LAB" index="2"]
+[node name="HOUSE" type="Area2D" parent="MAP" index="3"]
 
-[node name="Chief" parent="." index="1" groups=[
+position = Vector2( 250, -250 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="HOUSE_POLY" type="CollisionPolygon2D" parent="MAP/HOUSE" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -200, 150, -150, 200, 50, 0, 125, 0, 175, -50, 175, -125, 125, -175, 50, -175, 0, -125, 0, -50 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="POINT_1" type="Node2D" parent="MAP/HOUSE" index="1"]
+
+[node name="POINT_2" type="Node2D" parent="MAP/HOUSE" index="2"]
+
+[node name="POINT_3" type="Node2D" parent="MAP/HOUSE" index="3"]
+
+position = Vector2( -250, 250 )
+
+[node name="LAB" type="Area2D" parent="MAP" index="4"]
+
+position = Vector2( 250, 250 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="LAB_POLY" type="CollisionPolygon2D" parent="MAP/LAB" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -200, -150, -150, -200, 50, 0, 100, -50, 250, -50, 400, 100, 400, 250, 250, 400, 100, 400, -50, 250, -50, 100, 0, 50 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="POINT_1" type="Node2D" parent="MAP/LAB" index="1"]
+
+[node name="POINT_2" type="Node2D" parent="MAP/LAB" index="2"]
+
+[node name="POINT_3" type="Node2D" parent="MAP/LAB" index="3"]
+
+[node name="A2" type="Area2D" parent="MAP" index="5"]
+
+position = Vector2( -250, 250 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="A2_POLY" type="CollisionPolygon2D" parent="MAP/A2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 200, -150, 150, -200, -50, 0, -550, 0, -550, 500, 0, 500, 0, 50 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="1" groups=[
 "Persist",
-] instance=ExtResource( 2 )]
+]]
+
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit_left = -800
+limit_top = -750
+limit_right = 1000
+limit_bottom = 1000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+script = ExtResource( 3 )
+_sections_unfolded = [ "Limit", "Smoothing", "Transform" ]
 
 

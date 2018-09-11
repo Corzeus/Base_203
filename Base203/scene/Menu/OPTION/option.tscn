@@ -387,8 +387,8 @@ align = 1
 _sections_unfolded = [ "Focus", "Rect" ]
 
 [node name="KEYBOARD_MODE" type="Node2D" parent="." index="6" groups=[
-"KEYBOARD",
 "L1",
+"KEYBOARD",
 ]]
 
 position = Vector2( -200, -80 )
@@ -524,8 +524,8 @@ align = 1
 _sections_unfolded = [ "Rect" ]
 
 [node name="GAMEPAD_MODE" type="Node2D" parent="." index="7" groups=[
-"GAMEPAD",
 "L1",
+"GAMEPAD",
 ]]
 
 visible = false
