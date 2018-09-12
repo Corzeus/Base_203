@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Resource/SPE/AutoloadNode.gd" type="Script" id=1]
+[ext_resource path="res://Resource/SPE/Autoload/AutoloadNode.gd" type="Script" id=1]
 
 [node name="AutoloadNode" type="Node" index="0" groups=[
 "Autoload",
@@ -13,7 +13,6 @@ _sections_unfolded = [ "Pause" ]
 "cheat_node",
 ]]
 
-visible = false
 z_index = 127
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
@@ -42,5 +41,41 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
 _sections_unfolded = [ "Rect" ]
+
+[node name="Tree" type="Tree" parent="Node2D/LineEdit" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -103.0
+margin_top = -82.0
+margin_right = -63.0
+margin_bottom = -42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 5
+allow_reselect = true
+allow_rmb_select = true
+hide_folding = false
+hide_root = false
+drop_mode_flags = 1
+select_mode = 0
+
+[node name="Timer" type="Timer" parent="." index="1" groups=[
+"Persist",
+]]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
