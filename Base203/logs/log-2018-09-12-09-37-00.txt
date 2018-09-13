@@ -1,0 +1,21 @@
+OpenGL ES 3.0 Renderer: Intel(R) HD Graphics 4000
+**ERROR**: Error loading custom font 'res://Resource/SPE/MAIN_theme.tres'
+   At: scene/register_scene_types.cpp:617:register_scene_types() - Error loading custom font 'res://Resource/SPE/MAIN_theme.tres'
+**ERROR**: Error loading custom theme 'res://Resource/SPE/MAIN_Dfont.tres'
+   At: scene/register_scene_types.cpp:632:register_scene_types() - Error loading custom theme 'res://Resource/SPE/MAIN_Dfont.tres'
+WARNING: not found: debug/shapes/fps/force_fps
+Making folder Autoload in res://Resource/SPE
+call rescan!
+Moving res://Resource/SPE/AutoloadNode.gd -> res://Resource/SPE/Autoload/AutoloadNode.gd
+  Remap: res://Resource/SPE/AutoloadNode.gd -> res://Resource/SPE/Autoload/AutoloadNode.gd
+Remapping dependencies for: res://Resource/SPE/AutoloadNode.tscn
+**ERROR**: Another resource is loaded from path: res://Resource/SPE/Autoload/AutoloadNode.gd (possible cyclic resource inclusion)
+   At: core/resource.cpp:78:set_path() - Condition ' exists ' is true.
+call rescan!
+Moving res://Resource/SPE/AutoloadNode.tscn -> res://Resource/SPE/Autoload/AutoloadNode.tscn
+  Remap: res://Resource/SPE/AutoloadNode.tscn -> res://Resource/SPE/Autoload/AutoloadNode.tscn
+call rescan!
+request connect
+**ERROR**: Condition ' base.begins_with("local://") || base == "" ' is true. Continuing..:
+   At: editor/plugins/script_editor_plugin.cpp:1300:get_breakpoints() - Condition ' base.begins_with("local://") || base == "" ' is true. Continuing..:
+running cmdline: "C:\Program Files (x86)\Steam\steamapps\common\Godot Engine\godot.windows.opt.tools.64.exe" "--path" "C:/Users/Famille/Documents/GitHub/Base_203/Base203" "--remote-debug" "127.0.0.1:6007" "--allow_focus_steal_pid" "11212" "--position" "171,84" "res://Resource/SPE/Autoload/AutoloadNode.tscn"

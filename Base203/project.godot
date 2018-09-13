@@ -25,6 +25,15 @@ config/icon="res://Resource/img/Godot engine/icon.png"
 
 AutoloadNode="*res://Resource/SPE/AutoloadNode.tscn"
 
+[compression]
+
+formats/zstd/window_log_size=30
+
+[debug]
+
+settings/crash_handler/message="Envoyez a zyvon38@gmail.com"
+shapes/fps/force_fps=0
+
 [display]
 
 window/size/resizable=false
@@ -57,9 +66,18 @@ translations=PoolStringArray( "res://Resource/SPE/Translate.en.translation", "re
 
 file_logging/enable_file_logging=true
 file_logging/log_path="res://logs/log.txt"
-file_logging/max_log_files=-1
+file_logging/max_log_files=1000
+
+[physics]
+
+2d/thread_model=2
 
 [rendering]
 
 quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+threads/thread_model=2
+quality/subsurface_scattering/quality=2
+environment/default_clear_color=Color( 0.347656, 0.332718, 0.332718, 1 )
 environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=true
