@@ -1,0 +1,14 @@
+OpenGL ES 3.0 Renderer: Intel(R) HD Graphics 4000
+**ERROR**: Error loading custom font 'res://Resource/SPE/MAIN_theme.tres'
+   At: scene/register_scene_types.cpp:617:register_scene_types() - Error loading custom font 'res://Resource/SPE/MAIN_theme.tres'
+**ERROR**: Error loading custom theme 'res://Resource/SPE/MAIN_Dfont.tres'
+   At: scene/register_scene_types.cpp:632:register_scene_types() - Error loading custom theme 'res://Resource/SPE/MAIN_Dfont.tres'
+current: 0 indent: 0
+less than current
+current: 0 indent: 0
+less than current
+**SCRIPT ERROR**: Parse Error: ':' expected at end of line.
+   At: res://Resource/SPE/Autoload/AutoloadNode.gd:10:GDScript::reload() - Parse Error: ':' expected at end of line.
+**ERROR**: Method/Function Failed, returning: ERR_PARSE_ERROR
+   At: modules/gdscript/gdscript.cpp:583:reload() - Method/Function Failed, returning: ERR_PARSE_ERROR
+running cmdline: "C:\Program Files (x86)\Steam\steamapps\common\Godot Engine\godot.windows.opt.tools.64.exe" "--path" "C:/Users/Famille/Documents/GitHub/Base_203/Base203" "--remote-debug" "127.0.0.1:6007" "--allow_focus_steal_pid" "12540" "--position" "171,84" "res://Resource/SPE/Autoload/AutoloadNode.tscn"

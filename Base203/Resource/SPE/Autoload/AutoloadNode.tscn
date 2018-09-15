@@ -42,31 +42,6 @@ caret_blink_speed = 0.65
 caret_position = 0
 _sections_unfolded = [ "Rect" ]
 
-[node name="Tree" type="Tree" parent="Node2D/LineEdit" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -103.0
-margin_top = -82.0
-margin_right = -63.0
-margin_bottom = -42.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-columns = 5
-allow_reselect = true
-allow_rmb_select = true
-hide_folding = false
-hide_root = false
-drop_mode_flags = 1
-select_mode = 0
-
 [node name="Timer" type="Timer" parent="." index="1" groups=[
 "Persist",
 ]]
@@ -74,7 +49,7 @@ select_mode = 0
 process_mode = 1
 wait_time = 1.0
 one_shot = false
-autostart = false
+autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 

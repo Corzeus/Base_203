@@ -1,9 +1,25 @@
 extends Node
 
+const path_time = "res://Resource/SPE/time.save"
+var time_save
 var gamepad = ProjectSettings.get_setting("Config/Input/Controller_mode")
-var Time = 0
+var time
 var LNED
 var ND2D
+
+func add_time():
+	var time_save = File.new()
+	if not time_save.file_exists(path_time):
+		time_save.open(path_time, File.WRITE)
+		time_save.store_line(to_json({ "time" : 0 }))
+		time_save.close()
+	else:
+		var line1 = parse_json(time_save.get_line())
+		time = line1["time"]
+		time = time+1
+		time_save.open(path_time, File.WRITE)
+		time_save.store_line(to_json({"time" : time }))
+		time_save.close()
 
 func _ready():
 	var CN = get_tree().get_nodes_in_group("cheat_node")
@@ -23,4 +39,4 @@ func _process(delta):
 	LNED.call(set("size.x",OS.get_window_safe_area().size.x))
 
 func _on_Timer_timeout():
-	Time = 1 + Time
+	add_time()
