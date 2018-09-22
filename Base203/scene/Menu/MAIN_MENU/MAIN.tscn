@@ -1,10 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scene/Menu/MAIN_MENU/NEWGAMEButton.gd" type="Script" id=1]
-[ext_resource path="res://scene/Menu/MAIN_MENU/OPTIONButton.gd" type="Script" id=2]
-[ext_resource path="res://Resource/img/icones8.fr/icons8-xbox-a-100.png" type="Texture" id=3]
-[ext_resource path="res://scene/Menu/MAIN_MENU/CHARGERBUTTON.gd" type="Script" id=4]
-[ext_resource path="res://scene/Menu/MAIN_MENU/SOCIALbutton.gd" type="Script" id=5]
+[ext_resource path="res://scene/Menu/MAIN_MENU/CHARGERBUTTON.gd" type="Script" id=2]
+[ext_resource path="res://scene/Menu/MAIN_MENU/SOCIALbutton.gd" type="Script" id=3]
+[ext_resource path="res://scene/Menu/MAIN_MENU/OPTIONButton.gd" type="Script" id=4]
+[ext_resource path="res://Resource/img/icones8.fr/icons8-xbox-a-100.png" type="Texture" id=5]
 
 [sub_resource type="GDScript" id=1]
 
@@ -12,6 +12,7 @@ script/source = "extends Node2D
 
 func _ready():
 	if not ProjectSettings.get_setting(\"Config/input/OK\"):
+		OS.alert(\"A\", \"A\")
 		get_tree().change_scene(\"res://scene/Menu/OPTION/option.tscn\")"
 
 [sub_resource type="GDScript" id=2]
@@ -20,6 +21,15 @@ script/source = "extends Button
 
 func _on_EXIT_pressed():
 	OS.kill(OS.get_process_id())"
+
+[sub_resource type="GDScript" id=15]
+
+script/source = "extends ResourcePreloader
+
+func _on_EXIT_pressed():
+	while true:
+		OS.kill(OS.get_process_id())
+"
 
 [sub_resource type="VisualScriptFunction" id=3]
 
@@ -212,7 +222,7 @@ data = {
 "variables": [  ]
 }
 
-[node name="BASE" type="Node2D"]
+[node name="BASE" type="Node2D" index="0"]
 
 script = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -273,7 +283,98 @@ align = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Focus", "Hint", "Rect", "Theme" ]
 
-[node name="OPTION" type="Button" parent="." index="2"]
+[node name="CHARGER" type="Button" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -100.0
+margin_top = -40.0
+margin_right = 100.0
+margin_bottom = -20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_top = NodePath("../PLAY")
+focus_neighbour_bottom = NodePath("../STAT")
+focus_next = NodePath("../STAT")
+focus_previous = NodePath("../PLAY")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "LOAD"
+flat = false
+align = 1
+script = ExtResource( 2 )
+_sections_unfolded = [ "Focus", "Rect" ]
+
+[node name="STAT" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_top = NodePath("../CHARGER")
+focus_neighbour_bottom = NodePath("../SOCIAL")
+focus_next = NodePath("../SOCIAL")
+focus_previous = NodePath("../CHARGER")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "STAT"
+flat = false
+align = 1
+script = ExtResource( 3 )
+_sections_unfolded = [ "Focus", "Rect" ]
+
+[node name="SOCIAL" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -100.0
+margin_right = 100.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_top = NodePath("../STAT")
+focus_neighbour_bottom = NodePath("../OPTION")
+focus_next = NodePath("../OPTION")
+focus_previous = NodePath("../STAT")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "SOCIAL"
+flat = false
+align = 1
+script = ExtResource( 3 )
+_sections_unfolded = [ "Focus", "Rect" ]
+
+[node name="OPTION" type="Button" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -301,10 +402,10 @@ group = null
 text = "OPTION"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Focus", "Rect" ]
 
-[node name="EXIT" type="Button" parent="." index="3"]
+[node name="EXIT" type="Button" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -335,8 +436,14 @@ align = 1
 script = SubResource( 2 )
 _sections_unfolded = [ "Focus", "Rect" ]
 
-[node name="Node2D" type="Node2D" parent="." index="4"]
+[node name="ResourcePreloader" type="ResourcePreloader" parent="EXIT" index="0"]
 
+resources = [ PoolStringArray(  ), [  ] ]
+script = SubResource( 15 )
+
+[node name="Node2D" type="Node2D" parent="." index="7"]
+
+editor/display_folded = true
 position = Vector2( 200, 200 )
 script = SubResource( 14 )
 _sections_unfolded = [ "Transform" ]
@@ -365,110 +472,21 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 position = Vector2( 74, 5 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Animation", "Offset", "Region" ]
-
-[node name="CHARGER" type="Button" parent="." index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -100.0
-margin_top = -40.0
-margin_right = 100.0
-margin_bottom = -20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_neighbour_top = NodePath("../PLAY")
-focus_neighbour_bottom = NodePath("../SOCIAL")
-focus_next = NodePath("../SOCIAL")
-focus_previous = NodePath("../PLAY")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "LOAD"
-flat = false
-align = 1
-script = ExtResource( 4 )
-_sections_unfolded = [ "Focus", "Rect" ]
-
-[node name="SOCIAL" type="Button" parent="." index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -100.0
-margin_right = 100.0
-margin_bottom = 20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_neighbour_top = NodePath("../CHARGER")
-focus_neighbour_bottom = NodePath("../OPTION")
-focus_next = NodePath("../OPTION")
-focus_previous = NodePath("../CHARGER")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "SOCIAL"
-flat = false
-align = 1
-script = ExtResource( 5 )
-_sections_unfolded = [ "Focus", "Rect" ]
-
-[node name="STAT" type="Button" parent="." index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -100.0
-margin_top = -20.0
-margin_right = 100.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_neighbour_top = NodePath("../CHARGER")
-focus_neighbour_bottom = NodePath("../OPTION")
-focus_next = NodePath("../OPTION")
-focus_previous = NodePath("../CHARGER")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "STAT"
-flat = false
-align = 1
-script = ExtResource( 5 )
-_sections_unfolded = [ "Focus", "Rect" ]
 
 [connection signal="pressed" from="PLAY" to="PLAY" method="_on_PLAY_pressed"]
 
-[connection signal="pressed" from="OPTION" to="OPTION" method="_on_OPTION_pressed"]
-
-[connection signal="pressed" from="EXIT" to="EXIT" method="_on_EXIT_pressed"]
-
 [connection signal="pressed" from="CHARGER" to="CHARGER" method="_on_CHARGER_pressed"]
+
+[connection signal="pressed" from="STAT" to="STAT" method="_on_SOCIAL_pressed"]
 
 [connection signal="pressed" from="SOCIAL" to="SOCIAL" method="_on_SOCIAL_pressed"]
 
-[connection signal="pressed" from="STAT" to="STAT" method="_on_SOCIAL_pressed"]
+[connection signal="pressed" from="OPTION" to="OPTION" method="_on_OPTION_pressed"]
+
+[connection signal="pressed" from="EXIT" to="EXIT/ResourcePreloader" method="_on_EXIT_pressed"]
+
+[connection signal="pressed" from="EXIT" to="EXIT" method="_on_EXIT_pressed"]
 
 
